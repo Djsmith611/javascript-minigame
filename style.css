@@ -1,0 +1,106 @@
+@keyframes gradientShift {
+    0%, 100% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 100% 0;
+    }
+}
+
+body {
+    /* Linear gradient with stripes, designed to seamlessly repeat */
+    background: repeating-linear-gradient(
+        45deg,
+        #7e7e7e,
+        #7e7e7e 10px,
+        #1f1f1f 10px,
+        #1f1f1f 20px
+    );
+
+    /* Smooth, continuous animation */
+    animation: gradientShift 240s infinite linear;
+    background-size: 400% 400%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    text-align: center;
+    color: #ffffff;
+}
+#game-tiles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    width: fit-content;
+    margin: auto;
+}
+.tile{
+    background-color: rgba(0, 0, 0, 0.644);
+}
+
+#game-tiles div:hover {
+    background-color: rgba(255, 255, 255, 0.663); /* Lighten tile on hover */
+}
+
+#row-one, #row-two, #row-three {
+    display: flex;
+}
+
+
+#game-tiles div {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #ffffff52;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+#tileOne{
+    border-top-left-radius: 15px;
+}
+
+#tileThree{
+    border-top-right-radius: 15px;
+}
+
+#tileSeven{
+    border-bottom-left-radius: 15px;
+}
+
+#tileNine{
+    border-bottom-right-radius: 15px;
+}
+
+.tile.X {
+    background-color: black;
+    color: white; /* Ensuring the text color contrasts with the background */
+}
+
+.tile.O {
+    background-color: white;
+    color: black; /* Ensuring the text color contrasts with the background */
+}
+
+#player-wins {
+    border: solid;
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    background-color: black;
+    color: #ffffff;gap: 15px;
+}
+
+#player-wins div{
+    margin: 5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    
+}

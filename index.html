@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="game.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Tic-Tac-Toe</h1>
+    </header>
+    <main>
+        <section id="game-tiles">
+            <section id="row-one">
+                <div class="tile leftDiagonal leftVertical topHorizontal" id="tileOne"></div>
+                <div class="tile middleVertical topHorizontal" id="tileTwo"></div>
+                <div class="tile rightDiagonal rightVertical topHorizontal" id="tileThree"></div>
+            </section>
+            <section id="row-two">
+                <div class="tile leftVertical middleHorizontal" id="tileFour"></div>
+                <div class="tile leftDiagonal rightDiagonal middleVertical middleHorizontal" id="tileFive"></div>
+                <div class="tile rightVertical middleHorizontal" id="tileSix"></div>
+            </section>
+            <section id="row-three">
+                <div class="tile rightDiagonal leftVertical bottomHorizontal" id="tileSeven"></div>
+                <div class="tile middleVertical bottomHorizontal" id="tileEight"></div>
+                <div class="tile leftDiagonal rightVertical bottomHorizontal" id="tileNine"></div>
+            </section>
+        </section>
+    </main>
+    <p id="spacer"></p>
+    <footer>
+        <section id="player-wins">
+            <div>
+                <p>Player X :<span id="player-one-wins">0</span></p>
+            </div>
+            <div>
+                <p>Player O :<span id="player-two-wins">0</span></p>
+            </div>
+        </section>
+    </footer>
+</body>
+</html>
