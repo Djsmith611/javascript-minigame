@@ -8,21 +8,15 @@ let tileSix = document.getElementById('tileSix');
 let tileSeven = document.getElementById('tileSeven');
 let tileEight = document.getElementById('tileEight');
 let tileNine = document.getElementById('tileNine');
+let tileTen = document.getElementById('tileTen');
+let tileEleven = document.getElementById('tileEleven');
+let tileTwelve = document.getElementById('tileTwelve');
+let tileThirteen = document.getElementById('tileThirteen');
+let tileFourteen = document.getElementById('tileFourteen');
+let tileFifteen = document.getElementById('tileFifteen');
+let tileSixteen = document.getElementById('tileSixteen');
 
-let tiles = document.getElementsByClassName('tile');
-
-//three in a row classes
-//diagonals
-let leftDiagonal = document.getElementsByClassName('leftDiagonal');
-let rightDiagonal = document.getElementsByClassName('rightDiagonal');
-//verticals
-let leftVertical = document.getElementsByClassName('leftVertical');
-let middleVertical = document.getElementsByClassName('middleVertical');
-let rightVertical = document.getElementsByClassName('rightVertical');
-//horizontals
-let topHorizontal = document.getElementsByClassName('topHorizontal');
-let middleHorizontal = document.getElementsByClassName('middleHorizontal');
-let bottomHorizontal = document.getElementsByClassName('bottomHorizontal');
+let tiles = document.getElementsByClassName('tile')
 
 let playerOneWins = document.getElementById('player-one-wins');
 let playerTwoWins = document.getElementById('player-two-wins');
@@ -49,22 +43,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function checkForWin() {
         const winCombinations = [
-            [tileOne, tileTwo, tileThree],
-            [tileFour, tileFive, tileSix],
-            [tileSeven, tileEight, tileNine],
-            [tileOne, tileFour, tileSeven],
-            [tileTwo, tileFive, tileEight],
-            [tileThree, tileSix, tileNine],
-            [tileOne, tileFive, tileNine],
-            [tileThree, tileFive, tileSeven]
+            [tileOne, tileTwo, tileThree, tileFour],
+            [tileFive, tileSix, tileSeven, tileEight],
+            [tileNine, tileTen, tileEleven, tileTwelve],
+            [tileThirteen, tileFourteen, tileFifteen, tileSixteen],
+            [tileOne, tileSix, tileEleven, tileSixteen],
+            [tileOne, tileFive, tileNine, tileThirteen],
+            [tileTwo, tileSix, tileTen, tileFourteen],
+            [tileThree, tileSeven, tileEleven, tileFifteen],
+            [tileFour, tileEight, tileTwelve, tileSixteen]
         ];
     
         let winDetected = false;
     
         winCombinations.forEach(combo => {
-            if (combo[0].textContent && combo[0].textContent === combo[1].textContent && combo[0].textContent === combo[2].textContent) {
-    highlightWin(combo); // Highlight the winning tiles
-    alert(`Player ${combo[0].textContent} wins!`);
+            if (combo[0].textContent && combo[0].textContent === combo[1].textContent && combo[0].textContent === combo[2].textContent && combo[0].textContent === combo[3].textContent) {
+            highlightWin(combo); // Highlight the winning tiles
+            alert(`Player ${combo[0].textContent} wins!`);
                 if (combo[0].textContent === 'X') {
                     playerOneWinCount++;
                     playerOneWins.textContent = playerOneWinCount;

@@ -44,7 +44,7 @@ h1{
     background-color: rgba(255, 255, 255, 0.663); /* Lighten tile on hover */
 }
 
-#row-one, #row-two, #row-three {
+#row-one, #row-two, #row-three, #row-four{
     display: flex;
 }
 
@@ -63,15 +63,15 @@ h1{
     border-top-left-radius: 15px;
 }
 
-#tileThree{
+#tileFour{
     border-top-right-radius: 15px;
 }
 
-#tileSeven{
+#tileThirteen{
     border-bottom-left-radius: 15px;
 }
 
-#tileNine{
+#tileSixteen{
     border-bottom-right-radius: 15px;
 }
 
